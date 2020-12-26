@@ -1,6 +1,6 @@
 .feed {
-    border-right: 1px solid #D3D3D3;
     flex: 0.4;
+    border-right: 1px solid #D3D3D3;
     min-width: fit-content;
     overflow-y: scroll;
 }

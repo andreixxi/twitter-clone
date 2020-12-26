@@ -16,7 +16,7 @@ function TweetBox() {
 
                 <input
                     className="tweetBox__imageInput"
-                    placeholder="image URL for a fancy tweet"
+                    placeholder="insert image URL for a fancy tweet"
                     type="text"
                 />
 
