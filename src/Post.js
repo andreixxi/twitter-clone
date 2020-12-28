@@ -36,7 +36,7 @@ function Post({
                     </div>
                 </div>
                 <img src="image1.jpg" alt="check source" />
-                <div className="post_footer">
+                <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
                     <FavoriteBorderIcon fontSize="small" />
