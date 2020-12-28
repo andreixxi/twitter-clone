@@ -5,12 +5,10 @@ import Post from './Post';
 
 function Feed() {
     return (
-        <div>
+        <div className="feed">
             {/*header*/}
-            <div className="feed">
-                <div className="feed__header">
-                    <h2>Latest Tweets</h2>
-                </div>
+            <div className="feed__header">
+                <h2>Latest Tweets</h2>
             </div>
 
             {/*tweet box*/}
@@ -22,7 +20,7 @@ function Feed() {
             <Post />
             <Post />
         </div>
-        )
+    );
 }
 
 export default Feed;
