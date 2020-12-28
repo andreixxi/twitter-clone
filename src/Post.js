@@ -18,24 +18,26 @@ function Post({
     return (
         <div className="post">
             <div className="post__avatar">
-                <Avatar src="avatar.png" />
+                <Avatar src={avatar} />
             </div>
 
             <div className="post__body">
                 <div className="post__header">
                     <div className="post__headerText">
                         <h3>
-                            Clever Lang Quadrilateral{" "}
+                            {displayName}{" "}
                             <span className="post__headerSpecial">
-                                <CheckCircleIcon className="post__badge" /> @clq
+                                {/*if verified then show badge*/}
+                                {verified && < CheckCircleIcon className="post__badge" />} 
+                                @{userName}
                             </span>
                         </h3>
                     </div>
                     <div className="post__headerDescription">
-                        <p>Say NO to homework!</p>
+                      <p> {text} </p>
                     </div>
                 </div>
-                <img src="image1.jpg" alt="check source" />
+                <img src={image} alt="check source" />
                 <div className="post__footer">
                     <ChatBubbleOutlineIcon fontSize="small" />
                     <RepeatIcon fontSize="small" />
