@@ -11,10 +11,20 @@
 <br>
 firebase<br>
 `npm install -g firebase-tools`<br>
+`npm i @react-firebase/database`<br>
 settings -> config ->firebase.js<br>
 `npm i firebase` <br>
 realtime db -> create db (test mode)
 <br>manually add data
+<br>
+animation<br>
+`npm i react-flip-move`
+<br>
+deploy<br>
+`firebase login`<br>
+`firebase init`<br> hosting -> existing project -> (what do u want to use as ur public directory?) build<br>
+`npm run build`<br>
+`firebase deploy`
 <br>
 SidebarOptions
 * on hover turn blue 

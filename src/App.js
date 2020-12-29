@@ -3,9 +3,11 @@ import './App.css';
 import Sidebar from './SideBar';
 import Feed from './Feed';
 import Widgets from './Widgets';
+//import { FirebaseDatabaseProvider } from "@react-firebase/database";
 
 function App() {
-  return (
+    return (
+        //<FirebaseDatabaseProvider>
       <div className="app">
           {/* sidebar*/}
           <Sidebar /> 
@@ -15,7 +17,9 @@ function App() {
 
           {/* widgets */}
           <Widgets />
-    </div>
+            </div>
+        //</FirebaseDatabaseProvider>
+
   );
 }
 
