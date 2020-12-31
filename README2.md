@@ -7,6 +7,7 @@
 <br>
 `npm install @material-ui/core`<br>
 `npm install @material-ui/icons`<br>
+`npm install tailwindcss`<br>
 `npm install --save react-twitter-embed --legacy-peer-deps` @https://github.com/saurabhnemade/react-twitter-embed<br>
 <br>
 firebase<br>
