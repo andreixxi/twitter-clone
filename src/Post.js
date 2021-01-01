@@ -1,5 +1,5 @@
 import React from "react";
-import './Post.css';
+//import './Post.css';
 import { Avatar } from "@material-ui/core";
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';

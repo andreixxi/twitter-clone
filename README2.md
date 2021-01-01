@@ -24,7 +24,9 @@ deploy<br>
 `firebase login`<br>
 `firebase init`<br> hosting -> existing project -> (what do u want to use as ur public directory?) build<br>
 `npm run build`<br>
-`firebase deploy`
+`firebase deploy`<br>
+-----pt bootstrap-----
+`npm install react-bootstrap bootstrap`<br>
 <br>
 SidebarOptions
 * on hover turn blue 
