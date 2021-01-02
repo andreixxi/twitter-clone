@@ -21,6 +21,7 @@
     z-index: 100;
     border: 1px solid #D3D3D3;
     padding: 15px 20px;
+    color: lightgray;
 }
 
 .feed__header > h2 {

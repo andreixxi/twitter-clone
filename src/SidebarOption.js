@@ -1,5 +1,5 @@
 import React from "react";
-//import "./SidebarOption.css";
+import "./SidebarOption.css";
 
 function SidebarOption({active, text, Icon}) { //icon is a component so capital I
     return (

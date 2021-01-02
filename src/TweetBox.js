@@ -1,8 +1,8 @@
 import React from "react";
-//import "./TweetBox.css";
+import "./TweetBox.css";
 import { Avatar, Button} from "@material-ui/core"; 
 import { useState } from "react";
-import db from './firebase';
+import { db } from './firebase';
 
 function TweetBox() {
     const [tweetMessage, setTweetMessage] = useState("");
@@ -10,14 +10,14 @@ function TweetBox() {
     const sendTweet = e => {
         e.preventDefault(); //prevents refresh
 
-        db.collection("posts").add({
-            displayName: 'maria',
-            username: 'mariaaaaaa',
-            verified: false,
-            text: tweetMessage,
-            image: tweetMedia,
-            avatar: 'avatar.png'
-        });
+        //db.collection("posts").add({
+        //    displayName: 'maria',
+        //    username: 'mariaaaaaa',
+        //    verified: false,
+        //    text: tweetMessage,
+        //    image: tweetMedia,
+        //    avatar: 'avatar.png'
+        //});
 
         setTweetMessage("");//reset
         setTweetMedia("");

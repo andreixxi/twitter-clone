@@ -1,11 +1,8 @@
-import React, { useState, useEffect, useLayoutEffect} from "react";
+import React, { useState, useEffect} from "react";
 import './App.css';
-import firebaseApp from "./firebase";
+import { firebaseApp }from "./firebase";
 import Login from "./Login";
 import Hero from "./Hero";
-import Sidebar from './SideBar';
-import Feed from './Feed';
-import Widgets from './Widgets';
 
 function App() {
     const [user, setUser] = useState("");
@@ -100,10 +97,6 @@ function App() {
                         passwordError={passwordError}
                     />
                 )}
-            {/*
-          <Sidebar /> 
-          <Feed />
-          <Widgets />*/}
             </div>
   );
 }

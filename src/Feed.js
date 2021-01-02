@@ -1,10 +1,10 @@
 import React from "react";
-//import './Feed.css';
+import './Feed.css';
 import TweetBox from "./TweetBox";
 import Post from './Post';
 import { useState } from "react";
 import { useEffect } from "react";
-import db from "./firebase";
+import { db } from "./firebase";
 import FlipMove from 'react-flip-move';
 
 function Feed() {
@@ -30,7 +30,7 @@ function Feed() {
         <div className="feed">
             {/*header*/}
             <div className="feed__header">
-                <h2>Latest Tweets</h2>
+                <h2>Home</h2>
             </div>
 
             {/*tweet box*/}

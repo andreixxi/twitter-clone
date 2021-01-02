@@ -13,9 +13,8 @@ const firebaseConfig = {
 
 // connect firebase to the backend
 
-const firebaseApp = firebase.initializeApp(firebaseConfig);
-export default firebaseApp;
+export const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-//const db = firebaseApp.firestore(); //Access Firebase services
 
+export const db = firebaseApp.firestore(); //Access Firebase services
 //export default db; 
