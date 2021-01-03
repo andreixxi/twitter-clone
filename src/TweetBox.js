@@ -10,14 +10,14 @@ function TweetBox() {
     const sendTweet = e => {
         e.preventDefault(); //prevents refresh
 
-        //db.collection("posts").add({
-        //    displayName: 'maria',
-        //    username: 'mariaaaaaa',
-        //    verified: false,
-        //    text: tweetMessage,
-        //    image: tweetMedia,
-        //    avatar: 'avatar.png'
-        //});
+        db.collection("posts").add({
+            displayName: 'maria',
+            username: 'mariaaaaaa',
+            verified: false,
+            text: tweetMessage,
+            image: tweetMedia,
+            avatar: 'avatar.png'
+        });
 
         setTweetMessage("");//reset
         setTweetMedia("");
@@ -29,7 +29,7 @@ function TweetBox() {
                 <div className="tweetBox__input">
                     <Avatar src="avatar.png" />
                     <input
-                        onChange={e => setTweetMessage(e.target.value)}
+                        onChange={(e) => setTweetMessage(e.target.value)}
                         value={tweetMessage}
                         placeholder="Hey DAWN! What's going on?"
                         type="text"
@@ -37,7 +37,7 @@ function TweetBox() {
                 </div>
 
                 <input
-                    onChange={e => setTweetMedia(e.target.value)}
+                    onChange={(e) => setTweetMedia(e.target.value)}
                     value={tweetMedia}
                     className="tweetBox__imageInput"
                     placeholder="insert image URL for a fancy tweet"

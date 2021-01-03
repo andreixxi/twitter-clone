@@ -10,7 +10,7 @@ const Hero = ({ handleLogout}) => {
                 <h1>Welcome!</h1>
                 <button onClick={handleLogout} >Log out</button>
             </nav>
-            <div className="container">
+            <div className="container-fluid">
                 <div className="row ">
                     <Sidebar className="col-3"/>
                     <Feed className="col-6"/>

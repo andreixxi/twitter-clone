@@ -1,8 +1,9 @@
 import React, { useState, useEffect} from "react";
 import './App.css';
-import { firebaseApp }from "./firebase";
+import { firebaseApp } from "./firebase";
 import Login from "./Login";
 import Hero from "./Hero";
+import { db } from "./firebase";
 
 function App() {
     const [user, setUser] = useState("");
@@ -39,6 +40,22 @@ function App() {
                         break;
                 }
             });
+
+
+        //get the user id
+        const docRef = db.collection("users");
+        var docId = 0;
+        if (!docRef.exists) {
+            console.log('no such doc');
+        } else {
+            docId = docRef.id;
+        }
+        //if 
+        db.collection("users").add({
+            email: email,
+            password: password //probabil de sters hehe
+        });
+
     };
 
     const handleSignup = () => {

@@ -20,18 +20,15 @@ function Sidebar() {
 
             {/* sidebar options*/}
             <SidebarOption active Icon={HomeIcon} text="Home" />
-            <SidebarOption Icon={SearchIcon} text="Explore" />
             <SidebarOption Icon={NotificationsNoneIcon} text="Notifications" />
             <SidebarOption Icon={MailOutlineIcon} text="Messages" />
-            <SidebarOption Icon={BookmarkBorderIcon} text="Bookmarks" />
-            <SidebarOption Icon={SubjectIcon} text="Lists" />
             <SidebarOption Icon={PermIdentityIcon} text="Profile" />
             <SidebarOption Icon={MoreIcon} text="more more more and more" />
 
-            {/* button -> tweet */}
+            {/* button -> tweet 
             <Button variant="outlined" className="sidebar__tweet" fullWdith>
                 Tweet
-            </Button>
+            </Button>*/}
         </div>
     )
 }
