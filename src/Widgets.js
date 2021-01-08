@@ -12,20 +12,20 @@ function Widgets() {
         <div className="widgets">
             <div className="widgets__input">
                 <SearchIcon className="widgets__searchIcon" />
-                <input placeholder="Search Twitter" type="text" />
+                <input placeholder="Search dawnTter" type="text" class="text-light" />
             </div>
             <div className="widgets__widgetContainer">
-                <h2>Other tweets</h2>
+                <h2 class="text-secondary">Other tweets</h2>
+                <TwitterTweetEmbed tweetId={'1252093815332184071'} />
 
-                <TwitterTweetEmbed tweetId={'933354946111705097'} />
                 <TwitterTimelineEmbed
                     sourceType="profile"
                     screenName="saurabhnemade"
                     options={{ height: 400 }}
                 />
                 <TwitterShareButton
-                    url={'https://facebook.com/saurabhnemade'}
-                    options={{ text: '#reactjs is awesome', via: 'saurabhnemade' }}
+                    url={'https://twitter-clone-f89ed.web.app/'}
+                    options={{ text: 'what a twitter clone i cannot believe me eyes *music*' }}
                 />
             </div>
         </div>

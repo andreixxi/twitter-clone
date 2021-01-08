@@ -13,10 +13,19 @@
     margin-left: 20px;
     margin-bottom: 20px;
 }
+.myHover .myHover--on,
+.myHover:hover .myHover--off {
+    display: none;
+}
 
-.sidebar__tweet {
+.myHover:hover .myHover--on {
+    display: inline;
+    cursor: pointer;
+}
+
+/*.sidebar__tweet {*/
     /*!important pt a suprascrie/ overwrite Button @material-ui*/
-    background-color: #20B2AA !important;
+    /*background-color: #20B2AA !important;
     border: none !important;
     color: white !important;
     font-weight: 900 !important;
@@ -24,4 +33,4 @@
     border-radius: 30px !important;
     height: 50px !important;
     margin-top: 20px !important;
-}
+}*/
