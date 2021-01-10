@@ -1,7 +1,7 @@
 .feed {
     flex: 0.4;
     border-right: 1px solid #D3D3D3;
-    min-width: fit-content;
+    /*min-width: fit-content;*/
     overflow-y: scroll;
 }
 /*hide for chrome safari opera*/
@@ -11,7 +11,7 @@
 
 .feed {
     -ms-overflow-style: none; /*ie and edge*/
-    scrollbar-width: none; /*firefox*/
+    /*scrollbar-width: none;*/ /*firefox*/
 }
 
 .feed__header {

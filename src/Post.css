@@ -46,3 +46,13 @@
     padding-left: 10px;
     padding-top: 10px;
 }
+
+.redButton {
+    background-color: black;
+    color: red;
+}
+
+.greenButton {
+    background-color: white;
+    color: green;
+}

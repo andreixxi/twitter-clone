@@ -14,7 +14,9 @@ const Login = (props) => {
         passwordError
     } = props;
 
+    
     return (
+
         <section className="login">
             <div className="loginContainer">
                 <label>Email</label>
@@ -42,7 +44,6 @@ const Login = (props) => {
                                 Don't have an account ?
                                 <span onClick={() => setHasAccount(!hasAccount)} >Sign up right now</span>
                                 <br></br>
-                                <span>Forgot password?</span>
                             </p>
                         </>
                     ) : (
@@ -52,7 +53,6 @@ const Login = (props) => {
                                     Already have an account ?
                                     <span onClick={() => setHasAccount(!hasAccount)}>Sign in here</span>
                                     <br></br>
-                                    <span>Forgot password?</span>
                                 </p>
                             </>
                         )
