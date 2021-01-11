@@ -1,13 +1,15 @@
 .post {
     display: flex;
     align-items: flex-start;
-    border-bottom: 1px solid #ADD8E6;
+    border-bottom: 1px solid white;
     padding-bottom: 10px;
     color:white;
 }
 
 .post__body > img {
     border-radius: 20px;
+    max-height:200px;
+    width: auto;
 }
 
 .post__footer {

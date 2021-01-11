@@ -14,7 +14,12 @@ function App() {
     const [passwordError, setPasswordError] = useState("");
     const [hasAccount, setHasAccount] = useState(false);
 
-    var [username, setUserName] = useState("");
+    var [address, setAddresss] = useState("");
+    var [username, setUserName] = useState(""); // nu const!!!
+    var [avatar, setAvatar] = useState("");
+    var [verified, setVerified] = useState("");
+    var [displayname, setDisplayname] = useState("");
+
     const clearInputs = () => {
         setEmail("");
         setPassword("");
@@ -46,11 +51,20 @@ function App() {
         db.collection("users").get().then(function (querySnapshot) {
             querySnapshot.forEach(function (doc) {
                 // doc.data() is never undefined for query doc snapshots
-                //console.log(doc.id, " => ", doc.data());
+                //console.log(doc.id, " => ", doc.data().email);
                 var dbEmail = doc.data().email; //emailul curent din bd
                 if (email === dbEmail) {//  exista emailul in baza de date 
                     username = email.substring(0, email.lastIndexOf("@"));// pentru "john.doe@email.com" setez john.doe
+                    displayname = 'Clever Lang Quadrilateral ' + username;
+                    avatar = 'avatar.png';
+                    verified = Math.random() < 0.5;
+                    address = email;
+
                     setUserName(username); //setez usernameul curent
+                    setDisplayname(displayname);
+                    setAvatar(avatar);
+                    setVerified(verified);
+                    setAddresss(email);
                 }
             });
            
@@ -88,19 +102,28 @@ function App() {
                 }
             });
             //console.log("ok dupa cautare", ok)
-            if (ok == 1) {
+            if (ok == 1) { // userul nu se afla in bd, il adaug
                 username = email.substring(0, email.lastIndexOf("@"));// pentru "john.doe@email.com" setez john.doe
-                var displayname = 'Clever Lang Quadrilateral ' + username;
+                displayname = 'Clever Lang Quadrilateral ' + username;
+                avatar = 'avatar.png';
+                verified = Math.random() < 0.5;
+                address = email;
+
                 db.collection("users")
                     .add({
                         email: email,
                         password: password, //probabil de sters hehe
                         username: username, // calculat mai sus
                         displayname: displayname,
-                        avatar: 'avatar.png',
-                        verified: Math.random() < 0.5,
+                        avatar: avatar,
+                        verified: verified
                     });
+                setEmail(email);
                 setUserName(username);
+                setDisplayname(displayname);
+                setAvatar(avatar);
+                setVerified(verified);
+                setAddresss(address);
             }
         })
         .catch(function (error) {
@@ -128,7 +151,6 @@ function App() {
         authListener();
     }, []);
 
-   
     return (
         <div className="App">
             {/* <Helper/>*/}
@@ -136,7 +158,11 @@ function App() {
                 <div>
                     <Hero
                         handleLogout={handleLogout}
+                        address={address}
                         username={username}
+                        displayname={displayname}
+                        avatar={avatar}
+                        verified={verified}
                     />
                 </div>
             ) : (

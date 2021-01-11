@@ -6,7 +6,11 @@ import { firebaseApp } from "./firebase";
 
 const Hero = (props) => {
     const { handleLogout,
+        address,
         username,
+        displayname,
+        avatar,
+        verified
     } = props;
 
     return (
@@ -19,7 +23,11 @@ const Hero = (props) => {
                 <div className="row ">
                     <Sidebar className="col-3"/>
                     <Feed className="col-6"
+                        address={address}
                         username={username}
+                        displayname={displayname}
+                        avatar={avatar}
+                        verified={verified}
                     />
                     <Widgets className="col-3" />
                 </div>

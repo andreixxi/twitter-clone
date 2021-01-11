@@ -8,7 +8,6 @@ import FavoriteIcon from '@material-ui/icons/Favorite';
 import PublishIcon from '@material-ui/icons/Publish';
 import { forwardRef } from "react";
 
-
 const Post = forwardRef(({ displayName, username, verified, text, image, avatar }, ref) => 
 {
     return (
@@ -18,7 +17,7 @@ const Post = forwardRef(({ displayName, username, verified, text, image, avatar 
             </div>
 
             <div class="container-sm">
-                <div className="post__body" width="50%" height="auto">
+                <div className="post__body" >
                     <div className="post__header">
                         <div className="post__headerText">
                             <h3>
@@ -34,11 +33,11 @@ const Post = forwardRef(({ displayName, username, verified, text, image, avatar 
                           <p> {text} </p>
                         </div>
                         </div>
-                        <img src={image} alt="" width="100%" height="auto" />
+                    <img src={image} alt="" class="img-thumbnail" />
                     <div className="post__footer">
                         <ChatBubbleOutlineIcon fontSize="small" />
                         <RepeatIcon fontSize="small" />
-                        < FavoriteIcon fontSize="small"/>
+                        <FavoriteIcon fontSize="small"/>
                         <PublishIcon fontSize="small" />
                     </div>
                 </div>
