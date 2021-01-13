@@ -55,6 +55,31 @@ const Post = forwardRef(({ displayName, username, verified, text, avatar, image 
         //db.collection("posts").doc(postId).remove();
         //};
     }
+
+    var [k, setK] = useState("");
+    var [kk, setKk] = useState("");
+
+    function like() {
+        if (k == 0) {
+            k = 1;
+            setK(k);
+        }
+        else {
+            k = 0;
+            setK(k);
+        }
+    }
+
+    function retweet() {
+        if (kk == 0) {
+            kk = 1;
+            setKk(kk);
+        }
+        else {
+            kk = 0;
+            setKk(kk);
+        }
+    }
     return (
         <div className="post" ref={ref}>
             <div className="post__avatar">
@@ -78,10 +103,11 @@ const Post = forwardRef(({ displayName, username, verified, text, avatar, image 
                             <p> {text} </p>
                         </div>
                     </div>
+
                     <div class="view overlay">
                         <img src={image}
                             class="img-fluid img-thumbnail"
-                            alt=""   />
+                            alt="" />
                         <div class="mask near-moon-gradient"></div>
                     </div>
 
@@ -106,7 +132,11 @@ const Post = forwardRef(({ displayName, username, verified, text, avatar, image 
                             </MDBBtn>
                         </Fragment>
                     </div>
-
+                    {/*<div class="row">
+                    <button type="button" onClick={retweet} class="btn-lg aqua-gradient" size="sm">{kk}<MDBIcon icon="retweet" size="lg" /></button>
+                        <button type="button"onClick={like} class="btn-lg aqua-gradient" size="sm">{k}<MDBIcon fab icon="gratipay" size="lg" /></button>
+                    </div>
+                    */}
                 </div>
             </div>
         </div>

@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import './App.css';
 import { firebaseApp } from "./firebase";
 import Login from "./Login";
 import Hero from "./Hero";
 import { db } from "./firebase";
-import Helper from './Helper';
+import emailjs, { init } from 'emailjs-com';
+
 
 function App() {
     const [user, setUser] = useState("");
@@ -67,12 +68,25 @@ function App() {
                     setAddresss(email);
                 }
             });
-           
+
         })
             .catch(function (error) {
                 console.log("Error getting documents: ", error);
             });
     };
+
+    function sendEmail() {
+        init("user_T9Jn1YIeD2qZZS2zmpU0K");
+
+        emailjs.send("gmail", "dawntter", {
+            to_name: username,
+            to_email: email,
+        }).then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+    }
 
     const handleSignup = () => {
         clearErrors();
@@ -98,7 +112,7 @@ function App() {
                 //console.log(doc.id, " => ", doc.data());
                 var dbEmail = doc.data().email; //emailul curent din bd
                 if (email === dbEmail) {//  exista emailul in baza de date 
-                    ok = 0; 
+                    ok = 0;
                 }
             });
             //console.log("ok dupa cautare", ok)
@@ -124,14 +138,16 @@ function App() {
                 setAvatar(avatar);
                 setVerified(verified);
                 setAddresss(address);
+
+                sendEmail();
             }
         })
-        .catch(function (error) {
-            console.log("Error getting documents: ", error);
-        });
-    
+            .catch(function (error) {
+                console.log("Error getting documents: ", error);
+            });
+
     };
-    
+
     const handleLogout = () => {
         firebaseApp.auth().signOut();
     };
@@ -165,21 +181,23 @@ function App() {
                     />
                 </div>
             ) : (
-                    <Login
-                        email={email}
-                        setEmail={setEmail}
-                        password={password}
-                        setPassword={setPassword}
-                        handleLogin={handleLogin}
-                        handleSignup={handleSignup}
-                        hasAccount={hasAccount}
-                        setHasAccount={setHasAccount}
-                        emailError={emailError}
-                        passwordError={passwordError}
-                    />
+                    <div>
+                        <Login
+                            email={email}
+                            setEmail={setEmail}
+                            password={password}
+                            setPassword={setPassword}
+                            handleLogin={handleLogin}
+                            handleSignup={handleSignup}
+                            hasAccount={hasAccount}
+                            setHasAccount={setHasAccount}
+                            emailError={emailError}
+                            passwordError={passwordError}
+                        />
+                    </div>
                 )}
-            </div>
-  );
+        </div>
+    );
 }
 
 export default App;

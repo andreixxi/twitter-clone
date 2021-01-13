@@ -11,10 +11,10 @@ const Login = (props) => {
         hasAccount,
         setHasAccount,
         emailError,
-        passwordError
+        passwordError,
     } = props;
 
-    
+
     return (
 
         <section className="login">
@@ -48,7 +48,10 @@ const Login = (props) => {
                         </>
                     ) : (
                             <>
-                                <button onClick={handleSignup} >Sign up to dawnTter</button>
+                                {/*<button onClick={sendEmail}>Receive email </button>
+                                <p class="text-center">or </p> <br></br>*/}
+                                <button onClick={handleSignup}
+                                        >Sign up to dawnTter</button>
                                 <p>
                                     Already have an account ?
                                     <span onClick={() => setHasAccount(!hasAccount)}>Sign in here</span>
