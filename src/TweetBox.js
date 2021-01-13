@@ -29,11 +29,6 @@ const TweetBox = (props) => {
         setTweetMessage("");//reset
         setTweetMedia("");
     };
-    const deleteTweet = (e) => {
-        e.preventDefault(); //prevents refresh
-
-        db.collection("posts").doc("vezi cum iei id postare").delete();
-    };
 
     return (
         <div className="tweetBox">

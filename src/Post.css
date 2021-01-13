@@ -58,3 +58,7 @@
     background-color: white;
     color: green;
 }
+
+.overlay .mask:hover {
+    opacity: 0.5;
+}

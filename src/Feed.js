@@ -59,7 +59,6 @@ function Feed(props) {
         });;
 
 
-
     return (
         <div className="feed">
             {/*header*/}
@@ -77,7 +76,7 @@ function Feed(props) {
                 {posts.map((post) => (
                     <Post
                         displayName={displayname}
-                        key={postID}
+                        //key={postID}
                         username={username}
                         verified={verified}
                         text={post.text}

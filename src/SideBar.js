@@ -12,7 +12,7 @@ import SubjectIcon from '@material-ui/icons/Subject';
 import PermIdentityIcon from '@material-ui/icons/PermIdentity';
 import MoreIcon from '@material-ui/icons/More';
 import { Button } from "@material-ui/core";
-import { MDBIcon } from "mdbreact";
+import { MDBIcon } from 'mdbreact';
 
 function Sidebar() {
     return (
@@ -42,7 +42,8 @@ function Sidebar() {
                 <h3 className="sidebarOption myHover--off"><MDBIcon icon="chevron-circle-down" />&nbsp;&nbsp;more more more and more</h3>
                 <h3 class="text-white" ><span className="myHover--on" role="img" aria-label="shrug">did you not have enough?🤷‍♂️</span></h3>
             </div>
-           
+
+
         </div>
     )
 }

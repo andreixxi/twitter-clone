@@ -153,7 +153,6 @@ function App() {
 
     return (
         <div className="App">
-            {/* <Helper/>*/}
             {user ? (
                 <div>
                     <Hero
